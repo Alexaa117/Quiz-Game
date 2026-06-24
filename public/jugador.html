@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jugador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Jugador</h1>
+
+        <div id="registro">
+            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+            <button id="unirse">Unirse al juego</button>
+        </div>
+
+        <div id="zonaJuego" style="display:none;">
+            <h2 id="nombreJugador"></h2>
+
+            <button id="buzz" disabled>RESPONDER</button>
+            <p id="estado">Espera a que el profesor active el buzzer</p>
+
+            <div id="zonaOpciones" style="display:none;">
+                <h3>Elige tu respuesta:</h3>
+                <div class="opciones opciones-jugador">
+                    <button class="btn-opcion" data-indice="0">A</button>
+                    <button class="btn-opcion" data-indice="1">B</button>
+                    <button class="btn-opcion" data-indice="2">C</button>
+                    <button class="btn-opcion" data-indice="3">D</button>
+                </div>
+            </div>
+
+            <div id="pantallaFinal" class="pantalla-final" style="display:none;">
+                <h2>🏆 Juego terminado</h2>
+                <div id="ganadores"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const nombreInput = document.getElementById("nombre");
+        const unirseBtn = document.getElementById("unirse");
+        const registro = document.getElementById("registro");
+        const zonaJuego = document.getElementById("zonaJuego");
+        const nombreJugador = document.getElementById("nombreJugador");
+        const buzzBtn = document.getElementById("buzz");
+        const estado = document.getElementById("estado");
+        const zonaOpciones = document.getElementById("zonaOpciones");
+        const botonesOpcion = document.querySelectorAll(".btn-opcion");
+
+        const pantallaFinal = document.getElementById("pantallaFinal");
+        const ganadores = document.getElementById("ganadores");
+
+        let nombreGuardado = "";
+        let yaPresiono = false;
+        let yaRespondio = false;
+
+        unirseBtn.addEventListener("click", () => {
+            const nombre = nombreInput.value.trim();
+
+            if (nombre === "") {
+                alert("Escribe tu nombre");
+                return;
+            }
+
+            nombreGuardado = nombre;
+            socket.emit("registrarJugador", nombre);
+
+            registro.style.display = "none";
+            zonaJuego.style.display = "block";
+            nombreJugador.textContent = "Hola, " + nombre;
+        });
+
+        socket.on("buzzerActivado", () => {
+            buzzBtn.disabled = false;
+            yaPresiono = false;
+            yaRespondio = false;
+            zonaOpciones.style.display = "none";
+            estado.textContent = "¡Ya puedes presionar RESPONDER!";
+        });
+
+        buzzBtn.addEventListener("click", () => {
+            if (!yaPresiono) {
+                socket.emit("buzz");
+                yaPresiono = true;
+                buzzBtn.disabled = true;
+                estado.textContent = "Esperando si fuiste la primera persona...";
+            }
+        });
+
+        socket.on("jugadorPrimero", (jugador) => {
+            if (jugador.nombre === nombreGuardado) {
+                estado.textContent = "¡Tú presionaste primero! Ahora responde A, B, C o D.";
+            } else {
+                estado.textContent = jugador.nombre + " presionó primero";
+                buzzBtn.disabled = true;
+            }
+        });
+
+        socket.on("puedeResponder", () => {
+            zonaOpciones.style.display = "block";
+            botonesOpcion.forEach(btn => btn.disabled = false);
+        });
+
+        socket.on("otroJugadorRespondioPrimero", (nombre) => {
+            estado.textContent = nombre + " presionó primero. Espera la siguiente ronda.";
+            buzzBtn.disabled = true;
+            zonaOpciones.style.display = "none";
+        });
+
+        botonesOpcion.forEach(btn => {
+            btn.addEventListener("click", () => {
+                if (yaRespondio) return;
+
+                const indice = Number(btn.dataset.indice);
+                socket.emit("responderOpcion", indice);
+                yaRespondio = true;
+
+                botonesOpcion.forEach(b => b.disabled = true);
+                estado.textContent = "Respuesta enviada. Esperando resultado...";
+            });
+        });
+
+        socket.on("resultadoRespuesta", (data) => {
+            const letras = ["A", "B", "C", "D"];
+
+            if (data.jugador === nombreGuardado) {
+                if (data.esCorrecta) {
+                    estado.textContent = `¡Correcta! Elegiste ${letras[data.opcionElegida]}.`;
+                } else {
+                    estado.textContent = `Incorrecta. Elegiste ${letras[data.opcionElegida]}.`;
+                }
+            } else {
+                estado.textContent = `${data.jugador} respondió ${letras[data.opcionElegida]}.`;
+            }
+
+            zonaOpciones.style.display = "none";
+        });
+
+        socket.on("buzzerReiniciado", () => {
+            buzzBtn.disabled = true;
+            yaPresiono = false;
+            yaRespondio = false;
+            zonaOpciones.style.display = "none";
+            botonesOpcion.forEach(b => b.disabled = false);
+            estado.textContent = "Espera a que el profesor active el buzzer";
+        });
+
+        socket.on("juegoTerminado", (top3) => {
+            buzzBtn.disabled = true;
+            zonaOpciones.style.display = "none";
+            estado.textContent = "Juego terminado";
+
+            pantallaFinal.style.display = "block";
+            ganadores.innerHTML = "";
+
+            const lugares = ["🥇 1er lugar", "🥈 2do lugar", "🥉 3er lugar"];
+
+            top3.forEach((jugador, index) => {
+                const p = document.createElement("p");
+                p.textContent = `${lugares[index]}: ${jugador.nombre} - ${jugador.puntos} puntos`;
+                ganadores.appendChild(p);
+            });
+        });
+
+        socket.on("ocultarPantallaFinal", () => {
+            pantallaFinal.style.display = "none";
+            ganadores.innerHTML = "";
+            estado.textContent = "Espera a que el profesor active el buzzer";
+        });
+    </script>
+</body>
+
+</html>

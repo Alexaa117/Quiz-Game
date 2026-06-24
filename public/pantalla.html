@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pantalla del Juego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Juego de Preguntas</h1>
+
+        <div class="pregunta-box">
+            <h3 id="contadorPregunta">Pregunta 1 de 3</h3>
+            <h2 id="preguntaTexto">Esperando pregunta...</h2>
+
+            <div class="opciones">
+                <div class="opcion" id="op0"></div>
+                <div class="opcion" id="op1"></div>
+                <div class="opcion" id="op2"></div>
+                <div class="opcion" id="op3"></div>
+            </div>
+        </div>
+
+        <h2>Jugador que presionó primero:</h2>
+        <p id="primeroTexto">Nadie todavía</p>
+
+        <h2>Resultado:</h2>
+        <p id="resultadoRespuesta">Todavía no responde nadie</p>
+
+        <div id="pantallaFinal" class="pantalla-final" style="display:none;">
+            <h2>🏆 Juego terminado</h2>
+            <div id="ganadores"></div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const contadorPregunta = document.getElementById("contadorPregunta");
+        const preguntaTexto = document.getElementById("preguntaTexto");
+        const op0 = document.getElementById("op0");
+        const op1 = document.getElementById("op1");
+        const op2 = document.getElementById("op2");
+        const op3 = document.getElementById("op3");
+        const primeroTexto = document.getElementById("primeroTexto");
+        const resultadoRespuesta = document.getElementById("resultadoRespuesta");
+
+        const pantallaFinal = document.getElementById("pantallaFinal");
+        const ganadores = document.getElementById("ganadores");
+
+        socket.on("mostrarPregunta", (pregunta) => {
+            contadorPregunta.textContent = `Pregunta ${pregunta.numero} de ${pregunta.total}`;
+            preguntaTexto.textContent = pregunta.pregunta;
+            op0.textContent = "A) " + pregunta.opciones[0];
+            op1.textContent = "B) " + pregunta.opciones[1];
+            op2.textContent = "C) " + pregunta.opciones[2];
+            op3.textContent = "D) " + pregunta.opciones[3];
+
+            primeroTexto.textContent = "Nadie todavía";
+            resultadoRespuesta.textContent = "Todavía no responde nadie";
+
+            [op0, op1, op2, op3].forEach(op => {
+                op.classList.remove("correcta", "incorrecta");
+            });
+        });
+
+        socket.on("jugadorPrimero", (jugador) => {
+            primeroTexto.textContent = jugador.nombre + " presionó primero";
+        });
+
+        socket.on("resultadoRespuesta", (data) => {
+            const letras = ["A", "B", "C", "D"];
+            resultadoRespuesta.textContent =
+                `${data.jugador} respondió ${letras[data.opcionElegida]} - ${data.esCorrecta ? "CORRECTA" : "INCORRECTA"}`;
+
+            [op0, op1, op2, op3].forEach(op => {
+                op.classList.remove("correcta", "incorrecta");
+            });
+
+            const opciones = [op0, op1, op2, op3];
+            opciones[data.opcionCorrecta].classList.add("correcta");
+
+            if (!data.esCorrecta) {
+                opciones[data.opcionElegida].classList.add("incorrecta");
+            }
+        });
+
+        socket.on("juegoTerminado", (top3) => {
+            pantallaFinal.style.display = "block";
+            ganadores.innerHTML = "";
+
+            const lugares = ["🥇 1er lugar", "🥈 2do lugar", "🥉 3er lugar"];
+
+            top3.forEach((jugador, index) => {
+                const p = document.createElement("p");
+                p.textContent = `${lugares[index]}: ${jugador.nombre} - ${jugador.puntos} puntos`;
+                ganadores.appendChild(p);
+            });
+        });
+
+        socket.on("ocultarPantallaFinal", () => {
+            pantallaFinal.style.display = "none";
+            ganadores.innerHTML = "";
+        });
+    </script>
+</body>
+
+</html>

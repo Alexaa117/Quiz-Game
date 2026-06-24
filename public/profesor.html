@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profesor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Panel del Profesor</h1>
+
+        <div class="pregunta-box">
+            <h3 id="contadorPregunta">Pregunta 1 de 3</h3>
+            <h2 id="preguntaTexto">Esperando pregunta...</h2>
+
+            <div class="opciones">
+                <div class="opcion" id="op0"></div>
+                <div class="opcion" id="op1"></div>
+                <div class="opcion" id="op2"></div>
+                <div class="opcion" id="op3"></div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <button id="activar">Activar buzzer</button>
+            <button id="reiniciar">Reiniciar buzzer</button>
+            <button id="siguiente">Siguiente pregunta</button>
+            <button id="terminar">Terminar juego</button>
+            <button id="resetear">Reiniciar puntajes</button>
+        </div>
+
+        <h2>Estado:</h2>
+        <p id="estadoGeneral">Esperando...</p>
+
+        <h2>Jugador que presionó primero:</h2>
+        <p id="resultado">Nadie todavía</p>
+
+        <h2>Resultado de la respuesta:</h2>
+        <p id="resultadoRespuesta">Todavía no responde nadie</p>
+
+        <h2>Jugadores y puntos:</h2>
+        <ul id="listaJugadores"></ul>
+
+        <div id="pantallaFinal" class="pantalla-final" style="display:none;">
+            <h2>🏆 Juego terminado</h2>
+            <div id="ganadores"></div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const activarBtn = document.getElementById("activar");
+        const reiniciarBtn = document.getElementById("reiniciar");
+        const siguienteBtn = document.getElementById("siguiente");
+        const terminarBtn = document.getElementById("terminar");
+        const resetearBtn = document.getElementById("resetear");
+
+        const contadorPregunta = document.getElementById("contadorPregunta");
+        const preguntaTexto = document.getElementById("preguntaTexto");
+        const op0 = document.getElementById("op0");
+        const op1 = document.getElementById("op1");
+        const op2 = document.getElementById("op2");
+        const op3 = document.getElementById("op3");
+
+        const estadoGeneral = document.getElementById("estadoGeneral");
+        const resultado = document.getElementById("resultado");
+        const resultadoRespuesta = document.getElementById("resultadoRespuesta");
+        const listaJugadores = document.getElementById("listaJugadores");
+
+        const pantallaFinal = document.getElementById("pantallaFinal");
+        const ganadores = document.getElementById("ganadores");
+
+        activarBtn.addEventListener("click", () => socket.emit("activarBuzzer"));
+        reiniciarBtn.addEventListener("click", () => socket.emit("reiniciarBuzzer"));
+        siguienteBtn.addEventListener("click", () => socket.emit("siguientePregunta"));
+        terminarBtn.addEventListener("click", () => socket.emit("terminarJuego"));
+        resetearBtn.addEventListener("click", () => socket.emit("reiniciarPuntajes"));
+
+        socket.on("estadoBuzzer", (texto) => {
+            estadoGeneral.textContent = texto;
+        });
+
+        socket.on("jugadorPrimero", (jugador) => {
+            resultado.textContent = jugador.nombre + " presionó primero";
+        });
+
+        socket.on("mostrarPregunta", (pregunta) => {
+            contadorPregunta.textContent = `Pregunta ${pregunta.numero} de ${pregunta.total}`;
+            preguntaTexto.textContent = pregunta.pregunta;
+            op0.textContent = "A) " + pregunta.opciones[0];
+            op1.textContent = "B) " + pregunta.opciones[1];
+            op2.textContent = "C) " + pregunta.opciones[2];
+            op3.textContent = "D) " + pregunta.opciones[3];
+
+            resultado.textContent = "Nadie todavía";
+            resultadoRespuesta.textContent = "Todavía no responde nadie";
+
+            [op0, op1, op2, op3].forEach(op => {
+                op.classList.remove("correcta", "incorrecta");
+            });
+        });
+
+        socket.on("resultadoRespuesta", (data) => {
+            const letras = ["A", "B", "C", "D"];
+            resultadoRespuesta.textContent =
+                `${data.jugador} respondió ${letras[data.opcionElegida]} - ${data.esCorrecta ? "CORRECTA" : "INCORRECTA"}`;
+
+            [op0, op1, op2, op3].forEach(op => {
+                op.classList.remove("correcta", "incorrecta");
+            });
+
+            const opciones = [op0, op1, op2, op3];
+            opciones[data.opcionCorrecta].classList.add("correcta");
+
+            if (!data.esCorrecta) {
+                opciones[data.opcionElegida].classList.add("incorrecta");
+            }
+        });
+
+        socket.on("actualizarJugadores", (jugadores) => {
+            listaJugadores.innerHTML = "";
+
+            jugadores.sort((a, b) => b.puntos - a.puntos);
+
+            jugadores.forEach(jugador => {
+                const li = document.createElement("li");
+                li.textContent = jugador.nombre + " - " + jugador.puntos + " puntos";
+                listaJugadores.appendChild(li);
+            });
+        });
+
+        socket.on("juegoTerminado", (top3) => {
+            pantallaFinal.style.display = "block";
+            ganadores.innerHTML = "";
+
+            const lugares = ["🥇 1er lugar", "🥈 2do lugar", "🥉 3er lugar"];
+
+            top3.forEach((jugador, index) => {
+                const p = document.createElement("p");
+                p.textContent = `${lugares[index]}: ${jugador.nombre} - ${jugador.puntos} puntos`;
+                ganadores.appendChild(p);
+            });
+        });
+
+        socket.on("ocultarPantallaFinal", () => {
+            pantallaFinal.style.display = "none";
+            ganadores.innerHTML = "";
+        });
+    </script>
+</body>
+
+</html>

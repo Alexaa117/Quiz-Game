@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "pregunta": "¿Cuál es la capital de México?",
+        "opciones": [
+            "Guadalajara",
+            "Monterrey",
+            "Ciudad de México",
+            "Puebla"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 2,
+        "pregunta": "¿Cuánto es 8 x 7?",
+        "opciones": [
+            "54",
+            "56",
+            "64",
+            "48"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 3,
+        "pregunta": "¿Qué planeta es conocido como el planeta rojo?",
+        "opciones": [
+            "Venus",
+            "Marte",
+            "Júpiter",
+            "Saturno"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    }
+]
