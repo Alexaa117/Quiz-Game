@@ -1,36 +1,108 @@
 [
     {
         "id": 1,
-        "pregunta": "¿Cuál es la capital de México?",
+        "pregunta": "La teoría keynesiana fue desarrollada por el economista británico:",
         "opciones": [
-            "Guadalajara",
-            "Monterrey",
-            "Ciudad de México",
-            "Puebla"
+            "Adam Smith",
+            "John Maynard Keynes",
+            "David Ricardo",
+            "Milton Friedman"
         ],
-        "correcta": 2,
+        "correcta": 1,
         "puntos": 10
     },
     {
         "id": 2,
-        "pregunta": "¿Cuánto es 8 x 7?",
+        "pregunta": "El inicio del neoliberalismo en nuestro país fue iniciado por:",
         "opciones": [
-            "54",
-            "56",
-            "64",
-            "48"
+            "Carlos Salinas de Gortari",
+            "Miguel de la Madrid",
+            "Ernesto Zedillo",
+            "José López Portillo"
         ],
         "correcta": 1,
         "puntos": 10
     },
     {
         "id": 3,
-        "pregunta": "¿Qué planeta es conocido como el planeta rojo?",
+        "pregunta": "¿Entre qué países fue firmado el Tratado de Libre Comercio (TLCAN)?",
         "opciones": [
-            "Venus",
-            "Marte",
-            "Júpiter",
-            "Saturno"
+            "México, Brasil y Argentina",
+            "Estados Unidos, Canadá y Reino Unido",
+            "México, Estados Unidos y Canadá",
+            "México, España y Estados Unidos"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 4,
+        "pregunta": "La crisis de 1929 fue conocida también como:",
+        "opciones": [
+            "La Revolución Industrial",
+            "La Gran Depresión",
+            "La Guerra Fría",
+            "La Crisis del Petróleo"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 5,
+        "pregunta": "El 24 de octubre de 1929 fue conocido como:",
+        "opciones": [
+            "Viernes Negro",
+            "Martes Negro",
+            "Jueves Negro",
+            "Domingo Rojo"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 6,
+        "pregunta": "¿Cuáles fueron dos de los objetivos más importantes establecidos en la Agenda 2030 para el desarrollo sostenible?",
+        "opciones": [
+            "Industrialización y Comercio Internacional",
+            "Fin de la pobreza y Hambre Cero",
+            "Aumento del gasto militar y crecimiento económico",
+            "Exploración espacial y desarrollo tecnológico"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 7,
+        "pregunta": "¿Cuál fue una de las causas principales de la crisis de 1929?",
+        "opciones": [
+            "El auge especulativo en el mercado de valores",
+            "La Primera Guerra Mundial",
+            "La caída del Imperio Romano",
+            "La Revolución Francesa"
+        ],
+        "correcta": 0,
+        "puntos": 10
+    },
+    {
+        "id": 8,
+        "pregunta": "¿Qué pandemia afectó al mundo en 2020?",
+        "opciones": [
+            "Ébola",
+            "COVID-19",
+            "Influenza H1N1",
+            "Viruela"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 9,
+        "pregunta": "¿Qué evento geopolítico transformó el paisaje político y económico global a finales del siglo XX y principios del XXI?",
+        "opciones": [
+            "La Revolución Mexicana",
+            "La desintegración de la Unión Soviética",
+            "La Independencia de Estados Unidos",
+            "La Guerra de Corea"
         ],
         "correcta": 1,
         "puntos": 10
