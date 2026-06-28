@@ -106,5 +106,306 @@
         ],
         "correcta": 1,
         "puntos": 10
+    },
+    {
+        "id": 26,
+        "pregunta": "Actúan como vehículos de cooperación y diálogo, permitiendo a los países miembros compartir conocimientos, recursos y afrontar desafíos comunes:",
+        "opciones": [
+            "Empresas multinacionales",
+            "Organizaciones ",
+            "Partidos políticos",
+            "Sindicatos"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 27,
+        "pregunta": "¿Qué promueve la ONU?",
+        "opciones": [
+            "La competencia económica",
+            "La expansión territorial",
+            "La paz y la cooperación internacional",
+            "La privatización mundial"
+        ],
+        "correcta": 3,
+        "puntos": 10
+    },
+    {
+        "id": 28,
+        "pregunta": "El Banco Mundial (BM) se creó tras la Segunda Guerra Mundial con el propósito de apoyar la reconstrucción de:",
+        "opciones": [
+            "África y América",
+            "Europa y Asia",
+            "Oceanía y África",
+            "América Latina"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 29,
+        "pregunta": "Cuando la misión del Banco Mundial evolucionó, se centró principalmente en combatir la:",
+        "opciones": [
+            "Inflación",
+            "Desigualdad política",
+            "Pobreza",
+            "Migración"
+        ],
+        "correcta": 3,
+        "puntos": 10
+    },
+    {
+        "id": 30,
+        "pregunta": "¿Qué organismo proporciona asistencia financiera y orientación económica a países en crisis?",
+        "opciones": [
+            "FMI",
+            "OTAN",
+            "ONU",
+            "OMC"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 31,
+        "pregunta": "¿Qué organización multinacional se encarga de regular y promover el comercio internacional?",
+        "opciones": [
+            "FMI",
+            "OMC",
+            "UE",
+            "BM"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 32,
+        "pregunta": "¿Qué organización tiene como objetivo garantizar la libertad y la seguridad mediante medios políticos y militares?",
+        "opciones": [
+            "ONU",
+            "UE",
+            "OTAN",
+            "OCDE"
+        ],
+        "correcta": 3,
+        "puntos": 10
+    },
+    {
+        "id": 33,
+        "pregunta": "¿Cuál es el banco central de Estados Unidos encargado de regular la política monetaria y promover un crecimiento sostenible?",
+        "opciones": [
+            "Banco Mundial",
+            "Reserva Federal",
+            "Banco Central Europeo",
+            "FMI"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 34,
+        "pregunta": "¿Qué organización política y económica fue creada para promover la integración y cooperación entre países miembros?",
+        "opciones": [
+            "OTAN",
+            "ONU",
+            "Unión Europea",
+            "OMC"
+        ],
+        "correcta": 3,
+        "puntos": 10
+    },
+    {
+        "id": 35,
+        "pregunta": "¿Qué organización financiera continúa colaborando con México mediante apoyo económico y asesoría?",
+        "opciones": [
+            "Banco Central Europeo",
+            "Fondo Monetario Internacional",
+            "OTAN",
+            "ONU"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 36,
+        "pregunta": "¿Qué corriente política busca la abolición del Estado y de las estructuras jerárquicas de poder?",
+        "opciones": [
+            "Liberalismo",
+            "Socialismo",
+            "Anarquismo",
+            "Capitalismo"
+        ],
+        "correcta": 3,
+        "puntos": 10
+    }
+    {
+        "id": 37,
+        "pregunta": "¿Qué movimiento se opone firmemente a la globalización económica neoliberal y critica el papel de instituciones financieras internacionales como el FMI?",
+        "opciones": [
+            "Movimiento ecologista",
+            "Movimiento feminista",
+            "Movimiento obrero",
+            "Movimiento antiglobalización"
+        ],
+        "correcta": 4,
+        "puntos": 10
+    },
+    {
+        "id": 38,
+        "pregunta": "¿Qué movimiento se enfoca en proteger los derechos territoriales, culturales y políticos de los pueblos originarios?",
+        "opciones": [
+            "Movimiento obrero",
+            "Movimiento ecologista",
+            "Movimiento de resistencia indígena",
+            "Movimiento okupa"
+        ],
+        "correcta": 3,
+        "puntos": 10
+    },
+    {
+        "id": 39,
+        "pregunta": "¿Qué movimiento cuestiona profundamente las estructuras patriarcales y busca la igualdad entre hombres y mujeres?",
+        "opciones": [
+            "Movimiento feminista",
+            "Movimiento ecologista",
+            "Movimiento obrero",
+            "Movimiento anarquista"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 40,
+        "pregunta": "¿Qué movimiento se manifiesta mediante protestas, campañas, investigaciones y proyectos de conservación ambiental?",
+        "opciones": [
+            "Movimiento obrero",
+            "Movimiento ecologista",
+            "Movimiento feminista",
+            "Movimiento okupa"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 41,
+        "pregunta": "¿Qué movimientos se caracterizan por la defensa de los derechos laborales, sindicatos, solidaridad y conciencia de clase?",
+        "opciones": [
+            "Movimientos estudiantiles",
+            "Movimientos indígenas",
+            "Movimientos ecologistas",
+            "Movimientos obreros"
+        ],
+         "correcta": 4,
+         "puntos": 10
+    },
+    {
+        "id": 42,
+        "pregunta": "¿Qué movimiento utiliza espacios abandonados para vivienda, actividades comunitarias o proyectos culturales?",
+        "opciones": [
+            "Movimiento ecologista",
+            "Movimiento feminista",
+            "Movimiento obrero",
+            "Movimiento okupa"
+        ],
+        "correcta": 4,
+        "puntos": 10
+    },
+    {
+        "id": 43,
+        "pregunta": "¿Cómo se denomina a grupos o entidades que, sin tener legitimidad política o legal, influyen significativamente en las decisiones públicas?",
+        "opciones": [
+            "Poderes fácticos",
+            "Organizaciones internacionales",
+            "Movimientos sociales",
+            "Partidos políticos"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 44,
+        "pregunta": "¿Qué instituciones desempeñan un papel crucial en la formación de la opinión pública y en la configuración de la agenda política?",
+        "opciones": [
+            "Organizaciones religiosas",
+            "Medios de comunicación",
+            "Sindicatos",
+            "Universidades"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 45,
+        "pregunta": "¿Qué organizaciones han desempeñado durante muchos años un papel significativo en la formación de valores y normas sociales?",
+        "opciones": [
+            "Organizaciones religiosas",
+            "Partidos políticos",
+            "Empresas multinacionales",
+            "Organizaciones civiles"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 46,
+        "pregunta": "¿Qué organizaciones pueden influir en la política mediante la coerción o la corrupción, ejerciendo control sobre ciertas actividades o territorios?",
+        "opciones": [
+            "Organizaciones religiosas",
+            "Organizaciones internacionales",
+            "Movimientos obreros",
+            "Organizaciones criminales o narcotráfico "
+        ],
+        "correcta": 4,
+        "puntos": 10
+    },
+    {
+        "id": 47,
+        "pregunta": "¿Qué fenómeno es impulsado por una variedad de factores económicos, sociales, políticos y culturales?",
+        "opciones": [
+            "Globalización",
+            "Migración",
+            "Urbanización",
+            "Industrialización"
+        ],
+        "correcta": 2,
+        "puntos": 10
+    },
+    {
+        "id": 48,
+        "pregunta": "¿Cómo se denomina al movimiento de personas fuera de su lugar de residencia habitual, ya sea a través de una frontera internacional o dentro de un país?",
+        "opciones": [
+            "Migración",
+            "Turismo",
+            "Comercio",
+            "Colonización"
+        ],
+        "correcta": 1,
+        "puntos": 10
+    },
+    {
+        "id": 49,
+        "pregunta": "¿Cómo se llama el movimiento que realiza una persona desde su país de nacionalidad o residencia habitual hacia otro país, convirtiéndolo en su nuevo lugar de residencia?",
+        "opciones": [
+            "Migración interna",
+            "Inmigración",
+            "Emigración",
+            "Repatriación"
+        ],
+        "correcta": 3,
+        "puntos": 10
+    },
+    {
+        "id": 50,
+        "pregunta": "¿Cómo se denomina el acto de trasladarse a un país distinto del de nacionalidad o residencia habitual para establecerse en él?",
+        "opciones": [
+            "Emigración",
+            "Inmigración",
+            "Migración temporal",
+            "Desplazamiento forzado"
+        ],
+        "correcta": 2,
+        
+        "puntos": 10
     }
 ]
