@@ -70,6 +70,11 @@ h1 {
     font-weight: bold;
 
     letter-spacing: 1px;
+   
+   font-size:55px;
+   font-weight:800;
+
+   letter-spacing:2px;
 
 }
 
@@ -78,6 +83,10 @@ h2 {
     color: #374151;
 
     margin-bottom: 15px;
+
+   font-size:38px;
+
+   color:#374151;
 
 }
 
@@ -371,22 +380,38 @@ li:hover {
 }
 
 .opciones-jugador {
+       
+   display:grid;
 
-    margin-top: 20px;
+   grid-template-columns:repeat(2,120px);
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin:35px auto;
+
 
 }
 
 .btn-opcion {
+    width:120px;
 
-    width: 110px;
+    height:90px;
 
-    padding: 20px;
+    font-size:40px;
 
-    font-size: 28px;
+    font-weight:bold;
 
-    border-radius: 18px;
+    border-radius:20px;
 
-    background: linear-gradient(135deg, #6366f1, #3b82f6);
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
 
 }
 
