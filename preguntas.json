@@ -108,6 +108,198 @@
         "puntos": 10
     },
     {
+    "id": 10,
+    "pregunta": "¿Qué presidente enfrentó la crisis financiera de 1994-1995?",
+    "opciones": [
+        "Vicente Fox",
+        "Felipe Calderón",
+        "Ernesto Zedillo",
+        "Enrique Peña Nieto"
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 11,
+    "pregunta": "¿Qué buscaban las reformas de Ernesto Zedillo?",
+    "opciones": [
+        "Cerrar el comercio internacional.",
+        "Modernizar la economía e integrarla al mercado global.",
+        "Eliminar las empresas privadas.",
+        "Reducir la educación pública."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 12,
+    "pregunta": "¿Quién promovió la inversión extranjera directa?",
+    "opciones": [
+        "Andrés Manuel López Obrador",
+        "Ernesto Zedillo",
+        "Vicente Fox",
+        "Felipe Calderón"
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 13,
+    "pregunta": "¿En qué tema se enfocó principalmente Felipe Calderón?",
+    "opciones": [
+        "Turismo.",
+        "Agricultura.",
+        "Seguridad pública y combate al crimen organizado.",
+        "Cultura."
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 14,
+    "pregunta": "¿Qué reformas impulsó Enrique Peña Nieto?",
+    "opciones": [
+        "Solo reformas educativas.",
+        "Reformas energética, educativa y financiera.",
+        "Reformas agrícolas únicamente.",
+        "Reformas deportivas."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 15,
+    "pregunta": "¿Qué ha enfatizado el gobierno de Andrés Manuel López Obrador?",
+    "opciones": [
+        "Privatizar empresas.",
+        "La soberanía energética, el combate a la corrupción y los programas sociales.",
+        "Reducir programas sociales.",
+        "Eliminar apoyos económicos."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 16,
+    "pregunta": "¿Qué sucede cuando los recursos públicos no se distribuyen de manera justa?",
+    "opciones": [
+        "Disminuye la pobreza.",
+        "Aumenta el turismo.",
+        "Se generan pobreza y exclusión.",
+        "Mejora la economía."
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 17,
+    "pregunta": "¿Qué enfrentan muchos grupos vulnerables en México?",
+    "opciones": [
+        "Exceso de oportunidades.",
+        "Desigualdad y falta de acceso a servicios básicos.",
+        "Más empleos que nunca.",
+        "Mejores salarios."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 18,
+    "pregunta": "¿Qué comunidad indígena se menciona como ejemplo de pobreza?",
+    "opciones": [
+        "Mayas.",
+        "Nahuas.",
+        "Zapotecos.",
+        "Rarámuris (Tarahumaras)."
+    ],
+    "correcta": 3,
+    "puntos": 10
+},
+{
+    "id": 19,
+    "pregunta": "¿En qué estado viven los rarámuris mencionados en el texto?",
+    "opciones": [
+        "Oaxaca.",
+        "Chiapas.",
+        "Sonora.",
+        "Chihuahua."
+    ],
+    "correcta": 3,
+    "puntos": 10
+},
+{
+    "id": 20,
+    "pregunta": "¿Qué institución presentó los datos sobre la pobreza en 2022?",
+    "opciones": [
+        "INEGI.",
+        "SEP.",
+        "CONEVAL.",
+        "IMSS."
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 21,
+    "pregunta": "Según el texto, ¿qué porcentaje de la población estaba en situación de pobreza en 2022?",
+    "opciones": [
+        "20.5 %",
+        "50 %",
+        "36.6 %",
+        "10 %"
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 22,
+    "pregunta": "¿Qué indicador se menciona para medir la pobreza?",
+    "opciones": [
+        "Escolaridad.",
+        "Ingreso o bienestar económico.",
+        "Edad.",
+        "Nacionalidad."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 23,
+    "pregunta": "¿Cuál de las siguientes NO es una necesidad básica mencionada en el texto?",
+    "opciones": [
+        "Educación.",
+        "Salud.",
+        "Empleo digno.",
+        "Internet gratuito."
+    ],
+    "correcta": 3,
+    "puntos": 10
+},
+{
+    "id": 24,
+    "pregunta": "¿Cuál es el principal objetivo de repartir los recursos públicos de manera justa?",
+    "opciones": [
+        "Beneficiar solo a algunas personas.",
+        "Reducir el comercio internacional.",
+        "Asegurar el bienestar y el desarrollo de toda la sociedad.",
+        "Aumentar los impuestos."
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 25,
+    "pregunta": "¿Cuál es uno de los principales objetivos de la Agenda 2030 para el Desarrollo Sostenible?",
+    "opciones": [
+        "Incrementar el uso de combustibles fósiles.",
+        "Erradicar la pobreza y promover el desarrollo sostenible.",
+        "Reducir el comercio internacional.",
+        "Eliminar la educación pública."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+    {
         "id": 26,
         "pregunta": "Actúan como vehículos de cooperación y diálogo, permitiendo a los países miembros compartir conocimientos, recursos y afrontar desafíos comunes:",
         "opciones": [
@@ -409,3 +601,207 @@
         "puntos": 10
     }
 ]
+{
+    "id": 51,
+    "pregunta": "¿Qué son los derechos humanos?",
+    "opciones": [
+        "Normas que solo aplican a algunos países.",
+        "Derechos que pertenecen a todas las personas para proteger su dignidad, libertad e igualdad.",
+        "Leyes creadas únicamente por la ONU.",
+        "Reglas exclusivas para los ciudadanos mayores de edad."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 52,
+    "pregunta": "¿Por qué son importantes los derechos humanos?",
+    "opciones": [
+        "Porque garantizan una vida digna, el respeto y la convivencia en sociedad.",
+        "Porque permiten eliminar las leyes.",
+        "Porque benefician únicamente al gobierno.",
+        "Porque solo protegen a los trabajadores."
+    ],
+    "correcta": 0,
+    "puntos": 10
+},
+{
+    "id": 53,
+    "pregunta": "¿Qué función tiene la Constitución Mexicana?",
+    "opciones": [
+        "Regular únicamente el comercio internacional.",
+        "Proteger los derechos de las personas y establecer las leyes que regulan al país.",
+        "Administrar las empresas privadas.",
+        "Controlar la economía mundial."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 54,
+    "pregunta": "¿Qué son los DESCA?",
+    "opciones": [
+        "Derechos relacionados con la salud, educación, trabajo, cultura y un medio ambiente sano.",
+        "Leyes sobre comercio exterior.",
+        "Organizaciones internacionales.",
+        "Programas exclusivos para estudiantes."
+    ],
+    "correcta": 0,
+    "puntos": 10
+},
+{
+    "id": 55,
+    "pregunta": "¿Qué estudia la demografía?",
+    "opciones": [
+        "Los recursos naturales.",
+        "Las actividades económicas.",
+        "El tamaño, crecimiento, distribución y características de la población.",
+        "Los fenómenos climáticos."
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 56,
+    "pregunta": "¿Qué factores influyen en el crecimiento demográfico?",
+    "opciones": [
+        "La agricultura y el turismo.",
+        "La natalidad, la mortalidad y la migración.",
+        "La inflación y el comercio.",
+        "La tecnología y la cultura."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 57,
+    "pregunta": "¿Qué consecuencias tiene el crecimiento demográfico?",
+    "opciones": [
+        "Disminuye la necesidad de recursos.",
+        "Reduce la contaminación.",
+        "Genera mayor demanda de recursos, servicios y espacios, además de problemas ambientales.",
+        "Elimina la pobreza."
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 58,
+    "pregunta": "¿Por qué la población no se distribuye de manera uniforme?",
+    "opciones": [
+        "Porque todas las regiones tienen las mismas condiciones.",
+        "Porque depende de las condiciones geográficas, económicas y sociales de cada región.",
+        "Porque las ciudades están prohibidas.",
+        "Porque todas las personas viven en el campo."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 59,
+    "pregunta": "¿Qué es la urbanización?",
+    "opciones": [
+        "La disminución de la población.",
+        "El crecimiento de las ciudades debido al aumento de la población.",
+        "La creación de áreas naturales protegidas.",
+        "La migración de las ciudades al campo."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 60,
+    "pregunta": "¿Qué ventajas y desventajas tiene la urbanización?",
+    "opciones": [
+        "Ofrece más servicios y empleo, pero también provoca contaminación y sobrepoblación.",
+        "Solo genera beneficios económicos.",
+        "Elimina todos los problemas ambientales.",
+        "Reduce el crecimiento de las ciudades."
+    ],
+    "correcta": 0,
+    "puntos": 10
+},
+{
+    "id": 61,
+    "pregunta": "¿Qué impacto tuvo la Revolución Industrial?",
+    "opciones": [
+        "Disminuyó el desarrollo tecnológico.",
+        "Impulsó el desarrollo económico y tecnológico, pero incrementó la contaminación ambiental.",
+        "Eliminó las fábricas.",
+        "Redujo el uso de maquinaria."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 62,
+    "pregunta": "¿Qué provoca el deterioro ambiental?",
+    "opciones": [
+        "La sobreexplotación de los recursos naturales y la contaminación causada por las actividades humanas.",
+        "El uso de energías limpias.",
+        "La protección de los bosques.",
+        "La disminución de la población."
+    ],
+    "correcta": 0,
+    "puntos": 10
+},
+{
+    "id": 63,
+    "pregunta": "¿Qué es el cambio climático?",
+    "opciones": [
+        "La alteración del clima provocada principalmente por el aumento de gases de efecto invernadero.",
+        "El cambio de estaciones del año.",
+        "La disminución de la población.",
+        "La formación de montañas."
+    ],
+    "correcta": 0,
+    "puntos": 10
+},
+{
+    "id": 64,
+    "pregunta": "¿Cuáles son las consecuencias del cambio climático?",
+    "opciones": [
+        "Mayor producción agrícola.",
+        "Disminución de las lluvias.",
+        "Provoca sequías, inundaciones, aumento de temperatura y pérdida de biodiversidad.",
+        "Elimina los desastres naturales."
+    ],
+    "correcta": 2,
+    "puntos": 10
+},
+{
+    "id": 65,
+    "pregunta": "¿Qué es el desarrollo sustentable?",
+    "opciones": [
+        "El uso responsable de los recursos para satisfacer las necesidades actuales sin afectar a las futuras generaciones.",
+        "El uso ilimitado de los recursos naturales.",
+        "La explotación de todos los bosques.",
+        "El crecimiento industrial sin límites."
+    ],
+    "correcta": 0,
+    "puntos": 10
+},
+{
+    "id": 66,
+    "pregunta": "¿Cómo puede reducirse la contaminación?",
+    "opciones": [
+        "Aumentando el uso de combustibles fósiles.",
+        "Disminuyendo las emisiones, utilizando energías limpias y promoviendo el desarrollo sustentable.",
+        "Construyendo más fábricas.",
+        "Tirando residuos en los ríos."
+    ],
+    "correcta": 1,
+    "puntos": 10
+},
+{
+    "id": 67,
+    "pregunta": "¿Cómo puede contribuir la sociedad al desarrollo sustentable?",
+    "opciones": [
+        "Incrementando el consumo de recursos.",
+        "Respetando los derechos humanos, cuidando el medio ambiente y adoptando hábitos de consumo responsable.",
+        "Reduciendo las áreas verdes.",
+        "Ignorando las leyes ambientales."
+    ],
+    "correcta": 1,
+    "puntos": 10
+}
